@@ -1,0 +1,26 @@
+expose:
+  type: ingress
+  tls:
+    enabled: true
+    hosts:
+      hostName: harbor2.otus.fortislink.ru
+      secretName: letsencrypt-production
+  ingress:
+    hosts:
+      core: harbor2.otus.fortislink.ru
+      tls: true
+      tlsSecret: harbor2.otus.fortislink.ru
+    controller: default
+    annotations:
+      # ingress.kubernetes.io/ssl-redirect: "true"
+      # ingress.kubernetes.io/proxy-body-size: "0"
+      # nginx.ingress.kubernetes.io/ssl-redirect: "true"
+      # nginx.ingress.kubernetes.io/proxy-body-size: "0"
+      kubernetes.io/ingress.class: nginx
+      kubernetes.io/tls-acme: "true"
+      cert-manager.io/cluster-issuer: "letsencrypt-production"
+      cert-manager.io/acme-challenge-type: http01
+
+externalURL: https://harbor2.otus.fortislink.ru
+internalTLS:
+  enabled: false
