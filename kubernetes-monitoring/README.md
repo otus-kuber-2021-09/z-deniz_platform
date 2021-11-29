@@ -16,5 +16,7 @@
 4. Смотрим в prometheus
 
     `kubectl port-forward -n monitoring svc/prometheus-k8s 9090`
+    `kubectl port-forward -n monitoring svc/grafana 3000`
 
-![](prom.jpg)
+![PROMETHEUS](prom.jpg)
+![GRAFANA](graf.jpg)
