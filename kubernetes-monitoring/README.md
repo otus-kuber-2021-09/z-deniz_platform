@@ -1,7 +1,9 @@
-##Kubernetes-monitoring
+# Kubernetes-monitoring
+
 1. Деплоим NGINX
   - `kubectl apply -f kubernetes-monitoringconfigmap.yaml`
   - `kubectl apply -f kubernetes-monitoringdeployment.yaml`
+
 2. Устанавливаем мониторинг по В.2 (git clone https://github.com/prometheus-operator/kube-prometheus.git)
 
     `kubectl create -f manifests/setup`
