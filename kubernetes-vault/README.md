@@ -105,9 +105,11 @@ Key         Value
 password    asajkjkahs
 username    otus
 
-7. Включим авторизацию черерз k8s
+7. Включим авторизацию через k8s
 kubectl exec -it vault-0 --  vault auth list
 Path           Type          Accessor                    Description
 ----           ----          --------                    -----------
 kubernetes/    kubernetes    auth_kubernetes_25775c70    n/a
 token/         token         auth_token_303572c4         token based credentials
+
+8. ошибками при записи вызваны тем, что политика настроена на "read", "create", "list", для того, чтоб обновить данные, нужно добавить  "update"
