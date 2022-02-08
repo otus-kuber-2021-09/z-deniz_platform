@@ -12,7 +12,7 @@ spec:
     - -log-level=debug
     env:
     - name: VAULT_ADDR
-      value: http://vault-0:8200
+      value: http://vault:8200
     image: vault
     name: vault-agent
     volumeMounts:
